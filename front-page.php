@@ -273,24 +273,5 @@ global $more;
   ?>
     </main><!-- #main -->
   </div><!-- #primary -->
-
-<?php
-/*
-<div class="large-12 medium-12 small-12 columns">
-  <div class="reveal-btn">
-    <a href="#" data-reveal-id="contactModal" class="radius button">Contact For Free Consult</a>
-  </div>
-  <div id="contactModal" class="reveal-modal" data-reveal aria-labelledby="Drop us a message" aria-hidden="true" role="dialog">
-    <?php echo do_shortcode( '[twodrops_contact_form]' ); ?>
-    <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-  </div>
-</div>
-*/
-?>
-<?php
-/*
-echo antispambot( 'john.doe@mysite.com' );
-*/
-?>
       
 <?php get_footer(); ?>
