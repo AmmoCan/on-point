@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Testimonials Post Type
-Plugin URI: http://2-drops.com/
+Plugin URI: https://github.com/AmmoCan/on-point/blob/master/plugins/testimonial-posttype.php
 Description: A plugin that will create a custom post type for displaying Testimonials.
 Version: 1.0
 Author: AmmoCan
