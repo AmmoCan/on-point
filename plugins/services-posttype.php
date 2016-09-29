@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Services Post Type
-Plugin URI: http://2-drops.com/
+Plugin URI: https://github.com/AmmoCan/on-point/blob/master/plugins/services-posttype.php
 Description: A plugin that will create a custom post type for displaying Services.
 Version: 1.0
 Author: AmmoCan
