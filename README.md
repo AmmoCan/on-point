@@ -16,10 +16,10 @@ Hi. I'm a modern one page responsive theme called On Point. I'm built with ZURB'
 
 You will need to install this theme manually:
 
-1. If not done already, unzip the 'on-point' archive.
+1. If not done already, download and unzip the 'on-point' archive.
 2. Inside the 'on-point' theme folder locate the folder labeled 'plugins'.
-3. Inside the 'plugins' folder, there should be three (3) files: project-posttype.php, services-posttype.php, testimonials-posttype.php.
-4. Take these files and place them into your plugins folder (/wp-content/plugins/).
+3. Inside the 'plugins' folder, there should be three (3) files: project-posttype.php, services-posttype.php, testimonial-posttype.php.
+4. Take these three (3) files and place them into your plugins folder (/wp-content/plugins/).
 5. Now take the 'on-point' theme folder and place it into your themes folder (/wp-content/themes/).
 6. Sign in into your website (http://example.com/wp-login.php).
 7. Go to Appearance -> Themes, mouse over the On Point theme and click the 'Activate' button.
@@ -33,8 +33,8 @@ On Point makes use of the built in Theme Customizer. Once you have activated On 
 
 This panel allows you to modify the sites identity, which consists of: logo, site title, site tagline/description and site icon.
 
-* Logo - Add a logo to be displayed in the top left corner. You will be asked to crop the logo to 49px x 49px. If you don't provide a logo, the first letter of your site title will be used.
-* Site Title - Add a site title to be displayed in the top right corner. If a logo isn't provided, the first letter of this title will be used.
+* Logo - Add a logo to be displayed in the top left corner. You will be asked to crop the logo to 49px x 49px. If you don't provide a logo, the first letter of your site's title will be used.
+* Site Title - Add a site title to be displayed in the top right corner. If a logo isn't provided, the first letter of this title will be used for the logo.
 * Site Tagline/Description - Add a site tagline/description. This is used by the Open Graph protocol and is displayed in the footer.
 * Site Icon - Add a site icon, which will need to be 512px x 512px. This is used for your favicon and for mobile devices. 
 
@@ -64,7 +64,7 @@ This panel allows you to add a background image to the site's body section, whic
 
 ### Menus
 
-This panel adds custom menu management to the Customizer. It allows you to live-preview changes to your menus before they're published. On Point supports three menu locations:
+This panel adds custom menu management to the Customizer. It allows you to live-preview changes to your menus before they're published. On Point supports the following three (3) menu locations:
 
 1. Front Page Menu
 2. Single Page Menu
@@ -74,7 +74,7 @@ This panel adds custom menu management to the Customizer. It allows you to live-
 
 ### Widgets
 
-This panel adds custom widget management to the Customizer. It allows you to live-preview changes and add/remove widgets to the widgetized areas, which On Point supports these three areas:
+This panel adds custom widget management to the Customizer. It allows you to live-preview changes and add/remove widgets to the widgetized areas, which On Point supports the following three (3) areas:
 
 1. Footer Left Area - A widget area for the left side of your site's footer (will only appear if a widget is added).
 2. Footer Center - A second widget area for the center of your site's footer (will only appear if a widget is added).
@@ -84,7 +84,7 @@ This panel adds custom widget management to the Customizer. It allows you to liv
 
 ### Static Front Page
 
-This panel adds custom management of the static front page. It allows you to choose what the front page of the site displays, and what page to use as the front page and what page to use as the posts page.
+This panel adds custom management of the static front page. It allows you to choose what the front page of the site displays, and what page to use as the front page and what page to use for the posts page.
 
 1. Front Page Displays - You can choose the front page to either display your latest posts or a static page. This theme requires you to choose the front page to display a static page.
 2. Front Page - You can choose which page to use as your front page. This theme requires you to create a page named 'Home' and use as your front page.
@@ -107,7 +107,7 @@ On Point allows you to display three different types of menus. The Primary menu 
  * Contact - URL: #contact - Link Text: Contact
 3. After adding all of your front page content section links to your menu, click on the 'Save Menu' button.
 
-(Notice: The link text can be changed to your heart's desire, but the URL must remain the same as above.)
+(Notice: The link text can be changed to your heart's desire, but the URLs must remain the same as above.)
 	
 ### Single Page Menu - Allows you to display links back to each of the content sections on the front page, when viewing a single post page.
 
@@ -127,10 +127,10 @@ On Point allows you to display three different types of menus. The Primary menu 
 
 #### Set Up
 1. Go to Appearance->Menus, click on 'create a new menu' and under 'Menu Settings' check the box next to 'Social Links Menu'.
-2. Add links to each of your social services using the 'Custom Links' panel located on the left side. For example:
+2. Add links for each of your professional social services using the 'Custom Links' panel located on the left side. For example:
  * LinkedIn - URL: http://linkedin.com/in/your-user-name - Link Text: LinkedIn
 3. After adding your professional social link to your menu, go to the top of the screen and click on 'Screen Options' and make sure 'Title Attribute' is checked.
-4. Once you have verified 'Title Attribute' has been checked, click on your link and in the 'Title Attribute' field enter the social link name using lowercase. For example:
+4. Once you have verified 'Title Attribute' has been checked, click on your social link and in the 'Title Attribute' field enter the social link name using lowercase letters. For example:
  * LinkedIn - Title Attribute: linkedin
 5. After adding all of your professional social links to your menu, click on the 'Save Menu' button. 
 
@@ -152,7 +152,7 @@ On Point allows you to display three different types of menus. The Primary menu 
 ## Frequently Asked Questions
 
 #### Does this theme work with any plugins?
-On Point should work with most valid and non-destructive plugins, but depending on the plugin the styling might need to be adjusted for that plugin.
+On Point should work with most valid and non-destructive plugins, but depending on the type of plugin the styling might need to be adjusted for that plugin.
 #### Do I really need a sense of humor?
 No, not really, but it couldn't hurt.
 
