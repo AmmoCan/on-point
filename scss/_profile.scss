@@ -1,0 +1,265 @@
+// Theme profile section styling
+$profile-img-box-background: $white;
+$profile-img-box-border: solid 4px $anchor-color-hover;
+$profile-img-box-radius: 50%;
+$profile-img-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+$social-border-top: 1px dashed rgba(255, 255, 255, 0.3);
+$social-title-bkg: rgba(255, 255, 255, 0.2);
+$social-title-bkg-hover: rgba(255, 255, 255, 0.1);
+$social-title-color: scale-color($primary-color, $lightness: 25%);
+$social-title-font-size: 1rem;
+$social-acrdion-content-bkg: $medium-black;
+$social-icon-display: inline-block;
+$social-icon-font-size: 2rem;
+$social-icon-list-style: none;
+$social-icon-width: 20%;
+
+#profile-wrap {
+  max-height: 23.5625rem;
+  position: $global-position;
+}
+
+@include breakpoint(medium) {
+  #profile-wrap {
+    max-height: 28.5625rem;
+  }
+}
+
+// Flip animation
+.flip-container {
+  @include transform-style;
+	perspective: 1000px;
+}
+	// Flip the pane when hovered
+	.flip-container:hover .back {
+  	@include transform(rotateY(0deg));
+	}
+	
+	.flip-container:hover .front {
+  	@include transform(rotateY(180deg));
+	}
+
+.flip-container, .front, .back {
+	height: 30rem;
+	width: 20rem;
+}
+
+.profile {
+  @include perspective(1000);
+  @include transform-perspective(1000px);
+  @include transform-style;
+  background: rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+  overflow: $global-overflow;
+  position: $global-position;
+  text-align: center;
+	width: 100%;
+}
+
+.profile:hover .profile-back {
+  @include transform(rotateY(0deg));
+	@include opacity(1);
+}
+
+.profile:hover .profile-front {
+  @include transform(rotateY(180deg));
+  @include opacity(0);
+}
+
+// Flip speed goes here
+.profile-flipper {
+  @include transition(0.6s);
+  @include transform-perspective(1000px);
+  @include transform-style;
+	position: $global-position;
+	max-height: 20rem;
+}
+
+@include breakpoint(landscape) {
+  .profile-flipper {
+    max-height: 12rem;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-flipper {
+    max-height: 25rem;
+  }
+}
+
+// Hide back of pane during swap
+.profile-front, .profile-back {
+  @include transition(0.6s);
+  @include transform(rotateY(0deg));
+  @include transform-style;
+	-webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  left: 0;
+  position: $global-position;
+}
+
+// Front pane, placed above back
+.profile-front {
+	@include transform(rotateY(0deg));
+	@include opacity(1);
+	top: 0;
+	z-index: 2;
+}
+
+@include breakpoint(landscape) {
+  .profile-front {
+    top: -2rem;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-front {
+    top: 0;
+  } 
+}
+
+// Back, initially hidden pane
+.profile-back {
+  @include transform(rotateY(-180deg));
+	@include opacity(0);
+	top: -16rem;
+}
+
+@include breakpoint(landscape) {
+  .profile-back {
+    top: -12.4rem;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-back {
+    top: -19.6rem;
+  }
+}
+
+.profile-img-box {
+  background: $profile-img-box-background;
+  border: $profile-img-box-border;
+  border-radius: $profile-img-box-radius;
+  box-shadow: $profile-img-box-shadow;
+  display: inline-block;
+  line-height: 0;
+  margin-top: 8%;
+  position: $global-position;
+}
+
+.profile-img-box > img.profile-img {
+  border-radius: $profile-img-box-radius;
+  max-width: 9.375rem;
+}
+
+@include breakpoint(landscape) {
+  .profile-img-box > img.profile-img {
+    max-width: 6.25rem;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-img-box > img.profile-img {
+    max-width: 12.5rem;
+  }
+}
+
+.profile-front .fa-stack {
+  color: $anchor-color-hover;
+  position: absolute;
+  left: 76%;
+  bottom: 5%;
+  .fa-circle { text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2); }
+  .fa-info { color: $anchor-color; }
+}
+
+@include breakpoint(landscape) {
+  .profile-front .fa-stack {
+    font-size: 1em;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-front .fa-stack {
+    font-size: 1.333333em;
+  }
+}
+
+.profile-heading {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  position: $global-position;
+  h4 { margin-top: 2rem; }
+}
+
+@include breakpoint(landscape) {
+  .profile-heading h4 {
+    margin-bottom: 0;
+    margin-top: 0.875rem;
+  } 
+}
+
+@include breakpoint(medium) {
+  .profile-heading h4 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+}
+  
+.profile-description {
+  font-size: 0.875rem;
+  margin: 0 auto;
+  padding-bottom: 0;
+  position: $global-position;
+  width: 93.054%;
+}
+
+@include breakpoint(medium) {
+  .profile-description {
+    font-size: 1rem;
+  }
+}
+
+.social {
+  border-top: $social-border-top;
+  text-align: center;
+}
+
+.social .accordion {
+  background: $social-title-bkg;
+  border: none;
+}
+
+.social .accordion-title,
+.social .accordion-content {
+  border: none;
+  color: $social-title-color;
+  font-size: $social-title-font-size;
+}
+
+.is-active > .accordion-title { box-shadow: 0 0 2px rgba(0, 0, 0, .5); }
+
+.social .accordion-title:hover,
+.social .accordion-title:focus {
+  background: $social-title-bkg-hover;
+}
+
+:last-child:not(.is-active) > .accordion-title,
+:last-child > .accordion-content:last-child { border-bottom: none; }
+
+.social .accordion-content { background: $social-acrdion-content-bkg; padding: 0; }
+
+.social ul.accordion {
+  margin-bottom: 0;
+}
+
+.social .accordion li.icon {
+  display: $social-icon-display;
+  font-size: $social-icon-font-size;
+  list-style: $social-icon-list-style;
+  width: $social-icon-width;
+}

@@ -1,0 +1,105 @@
+// Theme testionials section styling
+$testimonial-thumb-border: 4px solid $anchor-color;
+$testimonial-thumb-shadow: $profile-img-box-shadow;
+$testimonial-thumb-color: $primary-color;
+$testimonial-thumb-display: inline-block;
+$testimonial-thumb-lineheight: 0;
+$testimonial-thumb-max-width: 6.25rem;
+$testimonial-thumb-hover-shadow: 0 0 6px 1px currentcolor;
+$client-info-cite-color: $anchor-color;
+$client-info-cite-font-size: rem-calc(16);;
+$client-info-cite-hover-color: $anchor-color-hover;
+$blockquote-border-left: 8px solid $secondary-color;
+$blockquote-color: inherit;
+$blockquote-display: block;
+$blockquote-font-style: italic;
+$blockquote-margin: 0 0 1.25em;
+$blockquote-padding: 1em 1.25rem 1em 2.8125rem;
+$blockquote-quotes-color: $primary-color;
+$blockquote-quotes-content: "\201C";
+$blockquote-quotes-font-size: 3.75rem;
+$blockquote-quotes-left: .3rem;
+$blockquote-quotes-position: absolute;
+$blockquote-quotes-top: -1rem;
+
+// Make sure there are no bottom-borders or box-shadows on any anchor elements
+.testimonial-content.entry-content a { border-bottom: none; box-shadow: none; }
+
+// Styling for the client's thumbnail image and it's respective anchor element
+.th {
+  @include transition(all 200ms ease-out);
+  border: $testimonial-thumb-border;
+  box-shadow:$testimonial-thumb-shadow;
+  color: $testimonial-thumb-color;
+  display: $testimonial-thumb-display;
+  line-height: $testimonial-thumb-lineheight;
+  max-width: $testimonial-thumb-max-width;
+}
+
+.th:hover, .th:focus {
+  box-shadow: $testimonial-thumb-hover-shadow;
+}
+
+.testimonial-img { padding-top: 5%; text-align: center; }
+
+.testimonial-img .th { border-radius: 50%; }
+
+.testimonial-img a { display: inline-block; }
+
+// Styling for the client's link, name and company meta info
+.client-info {
+  position: $global-position;
+  text-align: center;
+  z-index: 50;
+  h6 {
+    margin-top: 1rem;
+    a {
+      cite {
+        @include transition(color 1.0s ease-in);
+        color: $client-info-cite-color;
+        display: inline-block;
+        font-size: $client-info-cite-font-size;
+      }
+      &:hover {
+        cite {
+          color: $client-info-cite-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// Styling for the client's testimonial
+.post-excerpt blockquote {
+  border-left: $blockquote-border-left;
+  color: $blockquote-color;
+  display: $blockquote-display;
+  font-style: $blockquote-font-style;
+  margin: $blockquote-margin;
+  padding: $blockquote-padding;
+  position: $global-position;
+  text-align: left;
+}
+
+.post-excerpt blockquote::before {
+  color: $blockquote-quotes-color;
+  content: $blockquote-quotes-content;
+  font-size: $blockquote-quotes-font-size;
+  font-weight: $global-weight-bold;
+  left: $blockquote-quotes-left;
+  position: $blockquote-quotes-position;
+  top: $blockquote-quotes-top;
+}
+
+.post-excerpt blockquote::after { content: ""; }
+
+.post-excerpt blockquote a {
+  color: currentcolor;
+  cursor: pointer;
+  padding: 0 3px;
+  text-decoration: none;
+}
+
+.post-excerpt blockquote a:hover { color: currentcolor; }
+
+.post-excerpt blockquote em { font-style: italic; }

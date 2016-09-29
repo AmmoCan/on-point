@@ -1,0 +1,81 @@
+// Theme navigation styling
+$site-nav-height: 3.375rem;
+$site-nav-color: $anchor-color;
+$site-nav-color-hover: $anchor-color-hover;
+$site-nav-font-size: 0.6875rem;
+$site-nav-letterspacing: 0.125em;
+
+#site-navigation {
+  bottom: 0;
+  height: $site-nav-height;
+  left: 0;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+}
+
+.title-bar {
+  height: $site-nav-height;
+  width: 100%;
+}
+
+.menu-icon::after {
+  background: $primary-color;
+  box-shadow: 0 7px 0 $primary-color, 0 14px 0 $primary-color;
+}
+
+.menu-icon:hover::after {
+  background: scale-color($primary-color, $lightness: 25%);
+  box-shadow: 0 7px 0 scale-color($primary-color, $lightness: 25%), 0 14px 0 scale-color($primary-color, $lightness: 25%);
+}
+
+.top-bar {
+  background-color: rgba(0, 0, 0, 0.9);
+  bottom: $site-nav-height;
+  left: 0;
+  position: fixed;
+  right: 0;
+  li a {
+    color: $site-nav-color;
+    font-size: $site-nav-font-size;
+    font-weight: $global-weight-normal;
+    letter-spacing: $site-nav-letterspacing;
+    text-transform: $global-transform;
+    &:hover {
+      color: $site-nav-color-hover;
+    }
+  }
+}
+
+@include breakpoint(large) {
+  .top-bar {
+    bottom: 0;
+    display: inline-block !important;
+    text-align: center;
+    .top-bar-left {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+}
+
+.top-bar ul {
+  background-color: transparent;
+}
+
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(large) {
+    .title-bar {
+      display: none;
+    }
+  }
+}

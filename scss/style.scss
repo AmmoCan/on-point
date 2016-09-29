@@ -1,0 +1,85 @@
+/*!
+Theme Name: On Point
+Theme URI: http://2-drops.com/
+Author: AmmoCan
+Author URI: https://linkedin.com/in/ammocan
+Description: Hi. I'm a modern one page responsive theme called On Point. I'm built with ZURB's Foundation for Sites (Foundation 6) and Automattic's Underscores (_s). I'm designed to be a minimalistic and efficient way for freelancers and other professionals to showcase themselves, their services and their work.
+Version: 1.0.0
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0-standalone.html
+Text Domain: on-point
+Tags: dark, one-page, one-column, two-columns, three-columns, foundation, font-awesome, flex-grid, fluid-layout, responsive-layout, translation-ready, custom-background, custom-header, custom-menu, featured-images, post-formats
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Foundation 6 Sass
+# Font Awesome Icons
+# Mixins
+# Base Styles
+# Header Styles
+# Profile Styles
+# Navigation Styles
+# Services Styles
+# Testimonials Styles
+# Projects Styles
+# Blog Styles
+# Footer Styles
+--------------------------------------------------------------*/
+@charset 'utf-8';
+
+/*--------------------------------------------------------------
+# Foundation 6 Sass
+--------------------------------------------------------------*/
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@include foundation-everything(true);
+/*--------------------------------------------------------------
+# Font Awesome Icons
+--------------------------------------------------------------*/
+@import 'font-awesome-4.6.3/font-awesome';
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
+@import 'mixins';
+/*--------------------------------------------------------------
+# Base Styles
+--------------------------------------------------------------*/
+@import 'base';
+/*--------------------------------------------------------------
+# Header Styles
+--------------------------------------------------------------*/
+@import 'header';
+/*--------------------------------------------------------------
+# Profile Styles
+--------------------------------------------------------------*/
+@import 'profile';
+/*--------------------------------------------------------------
+# Navigation Styles
+--------------------------------------------------------------*/
+@import 'navigation';
+/*--------------------------------------------------------------
+# Services Styles
+--------------------------------------------------------------*/
+@import 'services';
+/*--------------------------------------------------------------
+# Testimonials Styles
+--------------------------------------------------------------*/
+@import 'testimonials';
+/*--------------------------------------------------------------
+# Projects Styles
+--------------------------------------------------------------*/
+@import 'projects';
+/*--------------------------------------------------------------
+# Blog Styles
+--------------------------------------------------------------*/
+@import 'blog';
+/*--------------------------------------------------------------
+# Footer Styles
+--------------------------------------------------------------*/
+@import 'footer';

@@ -1,0 +1,149 @@
+// Theme base styling
+// Base colors
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$medium-black: #333333;
+$black: #0a0a0a;
+$white: #fefefe;
+$foundation-blu: #2199e8;
+$peter-river: #4ea6e0;
+$primary-color: $peter-river;
+$secondary-color: #666666;
+$success-color: #3adb76;
+$warning-color: #ffae00;
+$alert-color: #ec5840;
+$body-background: $medium-black;
+$body-font-color: $white;
+
+// Base typography
+$rem-base: 16px;
+$global-overflow: hidden;
+$global-position: relative;
+$global-transform: uppercase;
+$body-font-family: 'Open Sans', Helvetica, Roboto, Arial, sans-serif;
+$header-font-family: 'Dosis', Helvetica, Roboto, Arial, sans-serif;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-color: $white;
+$header-lineheight: 1.3em;
+$header-margin-bottom: 1rem;
+$header-margin-top: 2.5rem;
+$site-title-display: inline-block;
+$site-title-font-family: $header-font-family;
+$site-title-font-size: 2.375rem;
+$site-title-margin: 0.9375rem 0 0;
+$site-title-position: $global-position;
+$site-title-transform: $global-transform;
+$section-background: rgba(0, 0, 0, 0.2);
+$section-title-font-size: 1.125rem;
+$section-title-font-weight: $global-weight-normal;
+$section-title-letterspacing: 0.5em;
+$section-title-lineheight: 1.4em;
+$section-title-margin-bottom: 2rem;
+$section-title-align: center;
+$section-title-transform: $global-transform;
+$paragraph-lineheight: 1.6em;
+
+body {
+  background-color: $body-background;
+  color: $body-font-color;
+}
+
+body,
+input,
+input[type='email'],
+input[type='search'],
+input[type='text'],
+select,
+textarea {
+	font-family: $body-font-family;
+	font-size: $rem-base;
+	line-height: $paragraph-lineheight;
+}
+
+input,
+input[type='email'],
+input[type='search'],
+input[type='text'],
+textarea {
+  background: $body-background;
+  color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  line-height: $header-lineheight;
+  margin-bottom: $header-margin-bottom;
+	margin-top: $header-margin-top;
+}
+
+a {
+  @include transition(color 1.0s ease-in);
+  text-decoration: none;
+}
+
+.nav-active {
+  border-bottom: 1px solid $primary-color;
+}
+
+#masthead.row,
+section.row { max-width: 100%; width: 100%; }
+
+.row .row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+// z-index values
+.blur { z-index: 10; }
+.site-branding { z-index: 50; }
+#profile-wrap { z-index: 100; }
+#site-navigation { z-index: 9999; }
+#single-post-title-wrap { z-index: 1; }
+
+main {
+  position: $global-position;
+  width: 100%;
+}
+
+section#testimonials,
+section#projects,
+section#blog { padding-bottom: 1.6875em; }
+
+section#contact { padding-bottom: 3rem; }
+
+section:nth-child(odd),
+footer { background: $section-background; }
+
+.section-title {
+  font-size: $section-title-font-size;
+  font-weight: $section-title-font-weight;
+  letter-spacing: $section-title-letterspacing;
+  line-height: $section-title-lineheight;
+  margin-bottom: $section-title-margin-bottom;
+  text-align: $section-title-align;
+  text-transform: $section-title-transform;
+}
+
+#projects-wrap article,
+#blog-wrap article { padding-bottom: 1.6875em; }
+
+// Hollow button
+.button.hollow {
+  @include button-hollow-style($peter-river);
+}
+// 404 page
+.error-404 .page-header { text-align: center; }
+.widget_archive {
+  margin-bottom: 1.25em;
+  select { width: 58%; }
+}

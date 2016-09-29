@@ -1,0 +1,56 @@
+// Theme footer section styling
+.site-info {
+  background: $black;
+  font-size: 0.5625rem;
+  margin-top: 0.625em;
+  padding: 0.625em 0.9375rem;
+}
+
+@include breakpoint(medium) {
+  .site-info {
+    font-size: 0.6875rem;
+  }
+}
+
+#contact-wrap {
+  margin-bottom: 1.25em;
+  h3 {
+    color: $body-font-color;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .contact-sub-heading {
+    padding: 0 8% 4%;
+    text-align: center;
+  }
+}
+
+// Contact Form 7 styling
+.wpcf7-submit {
+  border-radius: 0;
+  display: inline-block;
+  font-size: .9rem;
+  line-height: 1;
+  margin: 0 1rem 1rem 0;
+  padding: 0.85em 1em;
+  text-align: center;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+}
+
+.wpcf7-submit,
+.wpcf7-submit:hover,
+.wpcf7-submit:focus {
+  background-color: transparent;
+}
+
+.wpcf7-submit {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+}
+
+.wpcf7-submit:hover,
+.wpcf7-submit:focus {
+  border-color: scale-color($primary-color, $lightness: 25%);
+  color: scale-color($primary-color, $lightness: 25%);
+}

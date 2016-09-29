@@ -1,0 +1,140 @@
+// Theme header section styling
+$site-header-height: 30rem;
+$logo-border: 2px solid $anchor-color;
+$first-letter-font-family: $header-font-family;
+$first-letter-font-size: 2.375rem;
+$first-letter-font-weight: $global-weight-bold;
+$first-letter-lineheight: 1.2em;
+$first-letter-text-align: center;
+
+.site-header {
+  background: $black;
+  height: $site-header-height;
+}
+
+.single-post-bkg-image {
+  background: $black;
+  background-position: center;
+  background-repeat: no-repeat;
+  @include background-size(cover);
+  font-size: 0;
+  line-height: 0;
+  min-height: $site-header-height;
+  overflow: $global-overflow;
+  position: $global-position;
+  vertical-align: middle;
+  width: 100%;
+  &::after {
+    @include transition(all 1s);
+    background: rgba(0, 0, 0, 0.7);
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.front-page-bkg-image {
+  @include transform(translateZ(0));
+  height: 100%;
+  position: $global-position;
+}
+
+.front-page-bkg-image::before {
+  @include background-size(cover);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.blur {
+  @include linear-gradient-prefix(bottom left, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+  background: linear-gradient(to top right, rgba(43, 40, 50, 0.8) 0%, rgba(83, 86, 99, 0.8) 45%, rgba(69, 77, 91, 0.6) 60%);
+  -webkit-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.blur::after {
+  @include linear-gradient-prefix(339deg, rgba(43, 40, 50, 0.8) 0%, rgba(43, 40, 50, 0.4) 46%, rgba(0, 0, 0, 0.05) 50%);
+  background: linear-gradient(339deg, rgba(43, 40, 50, 0.8) 0%, rgba(43, 40, 50, 0.4) 46%, rgba(0, 0, 0, 0.05) 50%);
+  content: '';
+  -webkit-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.site-branding {
+  max-height: 5.125rem;
+  position: $global-position;
+  text-align: right;
+}
+
+.site-logo {
+	position: $global-position;
+}
+
+.site-logo a {
+  @include transition(all 1.0s ease-in);
+  background: rgba(0, 0, 0, 0.9);
+	border: $logo-border;
+  display: inline-block;
+  height: 3.0625rem;
+  left: 0;
+  overflow: $global-overflow;
+  position: absolute;
+  text-decoration: none;
+  top: 0.9375rem;
+	width: 3.0625rem;
+}
+
+.site-logo a:hover,
+.site-logo a:focus {
+	border-color: $anchor-color-hover;
+}
+
+.site-firstletter {
+  @include transition(color 1.0s ease-in);
+  color: $anchor-color;
+	font-family: $first-letter-font-family;
+	font-size: $first-letter-font-size;
+	font-weight: $first-letter-font-weight;
+	height: 100%;
+	line-height: $first-letter-lineheight;
+	text-align: $first-letter-text-align;
+	width: 100%;
+}
+
+.site-logo a:hover .site-firstletter,
+.site-logo a:focus .site-firstletter{
+	color: $anchor-color-hover;
+}
+
+.site-title {
+  display: $site-title-display;
+  font-family: $site-title-font-family;
+	font-size: $site-title-font-size;
+	font-weight: $global-weight-bold;
+	margin: $site-title-margin;
+	position: $site-title-position;
+	text-transform: $site-title-transform;
+}

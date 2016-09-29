@@ -1,0 +1,149 @@
+// Theme projects section styling
+$project-item-detail-color: $black;
+$project-item-detail-font-size: 0.875rem;
+$project-item-detail-font-weight: 300;
+$project-item-detail-left: 0;
+$project-item-detail-padding: 2.4% 2.4%;
+$project-item-detail-position: absolute;
+$project-item-detail-top: 50%;
+$project-item-detail-width: 100%;
+$project-item-img-bkg-hover: rgba(255, 255, 255, .93);
+$project-social-icon-display: inline-block;
+$project-social-icon-font-size: 1rem;
+$project-social-icon-list-style: none;
+$project-social-icon-width: 20%;
+$font-alt-color: $black;
+$font-alt-font-family: $header-font-family;
+$font-alt-letterspacing: 0.2em;
+$font-alt-transform: $section-title-transform;
+$project-item-meta-color: $body-font-color;
+$project-item-type-color: $body-font-color;
+$project-item-type-font-size: 0.9375rem;
+$project-item-type-letterspacing: 0.4em;
+$project-item-type-margin-top: 1.4375em;
+$project-item-type-transform: $section-title-transform;
+$project-item-role-color: $medium-gray;
+$project-item-role-font-size: 0.75rem;
+$project-item-role-letterspacing: $project-item-type-letterspacing;
+$project-item-role-margin-top: .25em;
+$project-item-role-transform: $section-title-transform;
+
+.project-item-img {
+  overflow: $global-overflow;
+  height: auto;
+  position: $global-position;
+  text-align: center;
+  width: 100%;
+}
+
+.project-item-img::after {
+  @include transition(all 1s cubic-bezier(0.000, 0.000, 0.580, 1.000));
+  background: transparent;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.project-item-detail {
+  @include opacity(0);
+  @include transform(translateY(-50%));
+  @include transition(all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000));
+  @include background-size(cover);
+  color: $project-item-detail-color;
+  font-size: $project-item-detail-font-size;
+  font-weight: $project-item-detail-font-weight;
+  left: $project-item-detail-left;
+  padding: $project-item-detail-padding;
+  position: $project-item-detail-position;
+  text-align: center;
+  top: $project-item-detail-top;
+  width: $project-item-detail-width;
+  z-index: 2;
+}
+
+@media (min-width: 512px) and (max-width: 749px) {
+  .project-item-detail {
+    padding: 7% 14%;
+  }
+}
+
+@media (min-width: 879px) and (max-width: 1123px) {
+  .project-item-detail {
+    padding: 7% 14%;
+  }
+}
+
+@media (min-width: 1318px) {
+  .project-item-detail {
+    padding: 7% 14%;
+  }
+}
+
+.project-item:hover .project-item-detail {
+  @include opacity(1);
+}
+
+.project-item:hover .project-item-img::after {
+  background: $project-item-img-bkg-hover;
+}
+
+.project-social-links {
+  ul {
+    margin-left: 0;
+    li {
+      display: $project-social-icon-display;
+      font-size: $project-social-icon-font-size;
+      list-style-type: $project-social-icon-list-style;
+      width: $project-social-icon-width;
+      i {
+        color: $primary-color;
+        &:hover {
+          color: scale-color($primary-color, $lightness: 25%);
+        }
+      }
+    }
+  }
+}
+
+.font-alt {
+  color: $font-alt-color;
+  font-family: $font-alt-font-family;
+  letter-spacing: $font-alt-letterspacing;
+  text-transform: $font-alt-transform;
+}
+
+h4.font-alt {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.normal {
+  font-weight: $global-weight-normal;
+}
+
+.project-item-meta {
+  @include transition(all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000));
+  color: $project-item-meta-color;
+  text-align: center;
+}
+
+.project-item-type {
+  color: $project-item-type-color;
+  font-size: $project-item-type-font-size;
+  letter-spacing: $project-item-type-letterspacing;
+  margin-top: $project-item-type-margin-top;
+  text-transform: $project-item-type-transform;
+}
+
+.project-item-role {
+  color: $project-item-role-color;
+  font-size: $project-item-role-font-size;
+  letter-spacing: $project-item-role-letterspacing;
+  margin-top: $project-item-role-margin-top;
+  text-transform: $project-item-role-transform;
+}
